@@ -1,4 +1,5 @@
-import com.jogamp.opengl.GL2;
+package lab1;
+
 import com.jogamp.opengl.GLAutoDrawable;
 import com.jogamp.opengl.GLCapabilities;
 import com.jogamp.opengl.GLEventListener;
@@ -7,20 +8,10 @@ import com.jogamp.opengl.awt.GLCanvas;
 
 import javax.swing.JFrame;
 
-public class Zad3 implements GLEventListener {
+public class Zad1 implements GLEventListener {
 
    @Override
-   public void display(GLAutoDrawable drawable) {
-      final GL2 gl = drawable.getGL().getGL2();
-      gl.glBegin(GL2.GL_TRIANGLES);
-      gl.glColor3f(1.0f, 0.0f, 0.0f);
-      gl.glVertex3f(0.5f, 0.7f, 0.0f);
-      gl.glColor3f(0.0f, 1.0f, 0.0f);
-      gl.glVertex3f(-0.2f, -0.50f, 0.0f);
-      gl.glColor3f(0.0f, 0.0f, 1.0f);
-      gl.glVertex3f(0.5f, -0.5f, 0.0f);
-      gl.glEnd();
-      gl.glFlush();
+   public void display(GLAutoDrawable arg0) {
    }
 
    @Override
@@ -39,13 +30,12 @@ public class Zad3 implements GLEventListener {
       final GLProfile profile = GLProfile.get(GLProfile.GL2);
       GLCapabilities capabilities = new GLCapabilities(profile);
       final GLCanvas glcanvas = new GLCanvas(capabilities);
-      Zad3 zad3 = new Zad3();
-      glcanvas.addGLEventListener(zad3);
+      Zad1 zad1 = new Zad1();
+      glcanvas.addGLEventListener(zad1);
       glcanvas.setSize(400, 400);
-      final JFrame frame = new JFrame(" Colored Triangle");
+      final JFrame frame = new JFrame(" Basic Frame");
       frame.getContentPane().add(glcanvas);
       frame.setSize(frame.getContentPane().getPreferredSize());
       frame.setVisible(true);
    }
 }
-
