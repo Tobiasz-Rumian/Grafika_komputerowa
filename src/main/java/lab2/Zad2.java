@@ -79,7 +79,7 @@ public class Zad2 implements GLEventListener {
       Zad2 zad2 = new Zad2();
       glcanvas.addGLEventListener(zad2);
       glcanvas.setSize(300, 300);
-      final JFrame frame = new JFrame("Zad2");
+      final JFrame frame = new JFrame("Zad3");
       frame.getContentPane().add(glcanvas);
       frame.setSize(frame.getContentPane().getPreferredSize());
       frame.setVisible(true);

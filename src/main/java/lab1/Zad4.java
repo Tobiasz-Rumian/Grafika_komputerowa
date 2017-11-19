@@ -131,7 +131,7 @@ public class Zad4 implements GLEventListener {
       Zad4 zad4 = new Zad4();
       glcanvas.addGLEventListener(zad4);
       glcanvas.setSize(400, 400);
-      final JFrame frame = new JFrame("lab1.Zad4");
+      final JFrame frame = new JFrame("lab1.Zad3");
       frame.getContentPane().add(glcanvas);
       frame.setSize(frame.getContentPane().getPreferredSize());
       frame.setVisible(true);
